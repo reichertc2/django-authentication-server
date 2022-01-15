@@ -10,3 +10,6 @@ class Equip(models.Model):
     manufacturer = models.CharField(max_length=65)
     installer = models.TextField()
     inspector = models.ForeignKey(get_user_model(),on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
